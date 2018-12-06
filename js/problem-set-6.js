@@ -45,7 +45,6 @@ ctx.strokeText("Hello, World!",10,50);
  */
 
 function drawRectangle() {
-
 let height;
 height = prompt("Height")
 height=Number(height)
@@ -58,9 +57,12 @@ xcoordinate=Number(xcoordinate)
 let ycoordinate;
 ycoordinate = prompt("y")
 ycoordinate=Number(ycoordinate)
-const canvas2 = document.getElementById('canvas2');
-const ctx = canvas2.getContext('2d');
+const canvas = document.getElementById('canvas2');
+const ctx = canvas.getContext('2d');
+ctx.clearRect(0,0,canvas.width, canvas.height)
+if (height >= 1 && width >= 1 && xcoordinate >= 5 && ycoordinate >= 5){
 ctx.strokeRect(xcoordinate, ycoordinate, width, height)
+}
 if (height < 1){
 alert("Height is invalid.")
 }
@@ -101,7 +103,10 @@ alert("ycoordinate is invalid.")
  */
 
 function drawColoredRectangle() {
-
+ const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+ctx.fillStyle = 'green';
+ctx.fillRect(20, 10, 150, 100);
 }
 
 /*
