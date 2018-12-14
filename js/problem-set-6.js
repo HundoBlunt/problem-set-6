@@ -104,10 +104,10 @@ alert("ycoordinate is invalid.")
 
 function drawColoredRectangle() {
   const canvas = document.getElementById('canvas3')
-  let ctx = getContext('2d');
- ctx.clearRect(0,0,canvas3.width,canvas3.height);
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0,0,canvas3.width,canvas3.height);
  let color = prompt("Choose a color");
- if (color === "black" || color === "blue" || color === "green" || color === "orange" || color === "purple" || color === "red" || color === "yellow") {
+ if(color == "black" || color == "blue" || color == "green" || color == "orange" || color == "purple" || color == "red" || color == "yellow") {
    ctx.fillStyle = color;
    ctx.fillRect(10, 10, 150, 50);
  } else {
