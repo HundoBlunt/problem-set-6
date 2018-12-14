@@ -146,7 +146,7 @@ function drawColoredRectangle() {
  */
 
 function drawTriangle() {
-
+var canvas = document.getElementById('canvas4')
 }
 
 /*
